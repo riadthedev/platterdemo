@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   generateStars();
   setupImageHover();
   setupShowMore();
+  setupAnimations();
 });
 
 // Generate star SVGs for all .stars containers
@@ -55,6 +56,7 @@ function setupShowMore() {
     if (expanded) {
       hiddenCards.forEach((card, i) => {
         card.style.display = 'block';
+        card.classList.remove('opacity-0');
         // Stagger the reveal animation
         setTimeout(() => {
           card.classList.add('revealed');
@@ -74,6 +76,32 @@ function setupShowMore() {
         });
       }, 500);
       btn.textContent = 'Show More';
+    }
+  });
+}
+
+// Page load animations
+function setupAnimations() {
+  // Remove flash of unstyled content delay for title
+  const title = document.querySelector('h2');
+  if (title) {
+    setTimeout(() => {
+      title.classList.remove('opacity-0');
+    }, 100);
+  }
+
+  // Stagger animate in cards
+  const cards = document.querySelectorAll('.product-card');
+  let visibleIndex = 0;
+
+  cards.forEach((card) => {
+    // Only animate cards currently visible (handles desktop vs mobile logic)
+    if (getComputedStyle(card).display !== 'none') {
+      setTimeout(() => {
+        card.classList.remove('opacity-0');
+        card.classList.add('animate-fade-in-up');
+      }, 150 + (visibleIndex * 80));
+      visibleIndex++;
     }
   });
 }
