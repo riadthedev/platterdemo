@@ -140,3 +140,16 @@
 .product-card:hover .product-img-secondary {
     opacity: 1;
 }
+
+/* Show More Button */
+#show-more-btn {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#show-more-btn:hover {
+    background-color: #333;
+}
+
+#show-more-btn:active {
+    transform: scale(0.98);
+}
