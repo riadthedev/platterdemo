@@ -112,6 +112,15 @@
 }
 
 /* Image hover transition */
+.product-card {
+    cursor: pointer;
+}
+
+.product-card .product-img-primary,
+.product-card .product-img-secondary {
+    transition: opacity 0.3s ease;
+}
+
 .product-card:hover .product-img-primary {
     opacity: 0;
 }
