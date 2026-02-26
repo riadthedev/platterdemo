@@ -36,6 +36,9 @@
 /* Badge Styles */
 .badge {
     position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 4px 8px;
     border-radius: 100px;
     border-width: 1px;
@@ -46,6 +49,9 @@
     line-height: 100%;
     letter-spacing: 0.06em;
     text-align: center;
+    /* Adjust padding slightly if Bebas Neue's baseline is sitting too low */
+    padding-bottom: 3px;
+    padding-top: 5px;
 }
 
 .badge-seller {
