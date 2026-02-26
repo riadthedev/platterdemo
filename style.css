@@ -21,6 +21,7 @@
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0;
+    color: #707070;
 }
 
 .price-text {
@@ -66,7 +67,24 @@
 /* Star Rating - generated via JS */
 .stars {
     display: flex;
-    color: #FACC15;
+    color: #000;
+    gap: 2px;
+}
+
+.stars .star-half {
+    position: relative;
+    overflow: hidden;
+    width: 12px;
+    height: 12px;
+}
+
+.stars .star-half svg {
+    position: absolute;
+    clip-path: inset(0 50% 0 0);
+}
+
+.stars .star-empty {
+    color: #ccc;
 }
 
 /* Custom Scrollbar */
