@@ -73,18 +73,33 @@
 
 .stars .star-half {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
     width: 12px;
     height: 12px;
 }
 
-.stars .star-half svg {
+.stars .star-half .star-half-filled {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
     clip-path: inset(0 50% 0 0);
+    color: #000;
+}
+
+.stars .star-half .star-half-empty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    clip-path: inset(0 0 0 50%);
+    color: #D1D5DB;
 }
 
 .stars .star-empty {
-    color: #ccc;
+    color: #D1D5DB;
 }
 
 /* Custom Scrollbar */
