@@ -8,6 +8,11 @@
     line-height: 100%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    transition: text-decoration 0.2s ease;
+}
+
+.product-card:hover .product-title {
+    text-decoration: underline;
 }
 
 .review-text {
@@ -92,6 +97,8 @@
 .products-scroll {
     scrollbar-width: thin;
     scrollbar-color: #ccc #f1f1f1;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 24px;
 }
 
 /* Mobile hidden cards - smooth reveal */
